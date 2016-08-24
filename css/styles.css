@@ -86,7 +86,14 @@ input {
   margin-left:8px;
   border: solid black 3px;
 }
+.col-md-4 #skiproll1 {
+  margin-top:10px;
+  float: right;
+}
 
+.col-md-4 #skiproll2 {
+  margin-top: 10px;
+}
 .col-md-4 #roll1 {
   margin-top: 10px;
   float: left;
