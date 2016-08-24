@@ -38,7 +38,7 @@ body {
 input {
   border: 3px solid black;
 }
-.col-md-10 h2 {
+.col-md-12 h2 {
   text-align: center;
   font-family: 'Mountains of Christmas', cursive;
   font-size: 50px;
@@ -54,6 +54,20 @@ input {
   font-size: 20px;
 }
 
+.col-md-4 #p1roll {
+  font-family: 'Slackey', cursive;
+  font-size: 20px;
+  float: left;
+  margin-right: 100px;
+}
+
+.col-md-4 #p2roll {
+  font-family: 'Slackey', cursive;
+  font-size: 20px;
+  float: right;
+  margin-left: 100px;
+}
+
 #score1 {
   float: left;
 }
@@ -63,15 +77,16 @@ input {
 }
 
 #play {
-  margin-left:10px;
+  margin-left:8px;
+  border: solid black 3px;
 }
 
-.col-md-10 #roll1 {
+.col-md-4 #roll1 {
   float: left;
   margin-bottom: 10px;
 }
 
-.col-md-10 #roll2 {
+.col-md-4 #roll2 {
   float: right;
   margin-bottom: 10px;
 }
