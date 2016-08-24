@@ -54,6 +54,11 @@ input {
   font-size: 20px;
 }
 
+#rolling{
+  border: dashed 5px blanchedalmond;
+  margin-bottom: 100px;
+}
+
 .col-md-4 #p1roll {
   font-family: 'Slackey', cursive;
   font-size: 20px;
