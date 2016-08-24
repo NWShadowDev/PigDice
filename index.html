@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Fontdiner+Swanky|Mountains+of+Christmas:700|Slackey" rel="stylesheet">
+    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/scripts.js"></script>
+  </head>
+  <body>
+    <div class ="jumbotron container">
+      <h1>Pig Dice Game</h1>
+      <h3>By Amber Farrington and Addison Nishijima</h3>
+      <h4>"The die has been cast, may the odds be ever in your favor!"</h4>
+    </div><div class = "container">
+      <div class="row">
+        <div class="col-md-2"></div>
+          <div class="col-md-4">
+            <h4>Player 1:</h4>
+            <form>
+              Name: <input type="text" id="firstname">
+          </div>
+            <div class="col-md-4">
+              <h4>Player 2:</h4>
+                Name: <input type="text" id="secondname">
+                <button id="play" type="btn btn-classic">Enter</button>
+              </form>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+          <div class="col-md-1">
+          </div>
+          <!--Game-->
+          <div class="col-md-10">
+            <h2>Pig Dice!</h2>
+            <button id="roll1" type="button" class="btn btn-danger">Player1 "Roll"</button>
+            <button id="roll2" type="button" class="btn btn-info">Player2 "Roll"</button>
+          </div>
+          <div class="col-md-1">
+          </div>
+      </div>
+      <!--Score-->
+        <div class="row">
+          <div class="col-md-1">
+          </div>
+          <div class="col-md-10">
+            <h4 id = "score1">Player1 Score: <span id="firstbalance"></span></h4>
+            <h4 id = "score2">Player2 Score: <span id="secondbalance"></span></h4>
+          </div>
+          <div class="col-md-1">
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
