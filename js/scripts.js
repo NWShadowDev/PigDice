@@ -9,12 +9,16 @@ function Player2 (initial, name) {
   this.name = name;
 }
 
+function isEmpty(value){
+    return (value === undefined || value == null || value.length <= 0) ? true : false;
+}
+
 Player1.prototype.hold = function(amount) {
   this.balance += amount;
 }
 
 Player1.prototype.loseturn = function(amount) {
-  this.balance = 0;
+  this.balance -= amount;
 }
 
 Player2.prototype.hold = function(amount) {
@@ -22,7 +26,7 @@ Player2.prototype.hold = function(amount) {
 }
 
 Player2.prototype.loseturn = function(amount) {
-  this.balance = 0;
+  this.balance -= amount;
 }
 
 //user interface logic
@@ -37,21 +41,22 @@ $(document).ready(function () {
     event.preventDefault();
     var player1Name = $("#firstname").val();
     var player2Name = $("#secondname").val();
-    // if (newPlayer1 == null) {
-    // alert("please enter a name");
-    // return false;
-  // }
-  //   if (newPlayer2 == null) {
-  //   alert("please enter a name");
-  //   return false;
-  // }
+    if (player1Name == "") {
+    alert("Please enter a name or be fed to the pigs!");
+  }else {
+
+  }
+    if (player2Name == "") {
+    alert("Please enter a name or be fed to the pigs!");
+  }else {
+    alert("Hello " + player1Name + "  " + "and " + player2Name + "!")
+  }
     $("#balance").text(currentBalance1);
     $("#balance").text(currentBalance2);
     newPlayer1 = new Player1(currentBalance1, player1Name);
     newPlayer2 = new Player2(currentBalance2, player2Name);
     $("#player1Name").text(player1Name);
     $("#player2Name").text(player2Name);
-    alert("Hello " + player1Name + "  " + "and " + player2Name + "!")
   });
 
   $("#roll1").click(function(event){
@@ -59,10 +64,15 @@ $(document).ready(function () {
   var inputtedRoll1 = Math.floor(Math.random() * 6);
    if (inputtedRoll1 === 1) {
      newPlayer1.loseturn();
+     currentBalance1 = 0;
+     $("#firstbalance").text(currentBalance1);
      alert("Sorry, you lost your turn! Player 2, your turn!");
      document.getElementById("roll1").disabled = true;
      document.getElementById("roll2").disabled = false;
    }else if (inputtedRoll1 === 0) {
+      newPlayer1.loseturn();
+        currentBalance1 = 0;
+        $("#firstbalance").text(currentBalance1);
         alert("Sorry, you lost your turn! Player 2, your turn!");
         document.getElementById("roll1").disabled = true;
         document.getElementById("roll2").disabled = false;
@@ -82,12 +92,17 @@ $(document).ready(function () {
   var inputtedRoll2 = Math.floor(Math.random() * 6);
    if (inputtedRoll2 ===1) {
      newPlayer2.loseturn();
+     currentBalance2 = 0;
      document.getElementById("roll2").disabled = true;
      document.getElementById("roll1").disabled = false;
+     $("#secondbalance").text(currentBalance2);
      alert("Sorry, you lost your turn! Player 1, your turn!");
    }else if (inputtedRoll2 === 0) {
+     newPlayer2.loseturn();
+     currentBalance2 = 0;
      document.getElementById("roll2").disabled = true;
      document.getElementById("roll1").disabled = false;
+     $("#secondbalance").text(currentBalance2);
      alert("Sorry, you lost your turn! Player 1, your turn!");
    }else {
      newPlayer2.hold(currentBalance2 += inputtedRoll2);
