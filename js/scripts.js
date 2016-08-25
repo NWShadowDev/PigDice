@@ -71,7 +71,7 @@ $(document).ready(function () {
   });
 //Player 1 Roll//
   $("#roll1").click(function(event){
-    debugger;
+    // debugger;
   event.preventDefault();
   var inputtedRoll1 = Math.floor(Math.random() * 6);
    if (inputtedRoll1 <= 1) {
@@ -98,20 +98,25 @@ $(document).ready(function () {
   });
 
   $("#skip1").click(function(event) {
-    newPlayer1.hold(currentBalance1 += inputtedRoll1);
+    var inputtedRoll1 = Math.floor(Math.random() * 6);
+    newPlayer1.hold(currentBalance1);
     if(inputtedRoll1 >= 2){
-    alert("Player1 rolled: " + inputtedRoll1);
+    alert("Player1 Holds. Player 2, Go!");
     $("#firstbalance").text(currentBalance1);
+    document.getElementById("roll2").disabled = false;
+    document.getElementById("roll1").disabled = true;
   }
     if(currentBalance1 >= 10) {
       newPlayer1.winner();
       alert("Player 1, you win! Player 2, the pigs will now eat you! >:D");
+      document.getElementById("roll2").disabled = true;
+      document.getElementById("roll1").disabled = true;
     }
   });
 
   //Player2//
   $("#roll2").click(function(event){
-    debugger;
+    // debugger;
   event.preventDefault();
   var inputtedRoll2 = Math.floor(Math.random() * 6);
    if (inputtedRoll2 <=1) {
@@ -138,12 +143,17 @@ $(document).ready(function () {
   });
 
   $("#skip2").click(function(event){
-    newPlayer2.hold(currentBalance2 += inputtedRoll2);
-    alert("Player2 rolled: " + inputtedRoll2);
+    var inputtedRoll2 = Math.floor(Math.random() * 6);
+    newPlayer2.hold(currentBalance2);
+    alert("Player2 Holds. Player 1, Go!");
     $("#secondbalance").text(currentBalance2);
+    document.getElementById("roll2").disabled = true;
+    document.getElementById("roll1").disabled = false;
     if(currentBalance2 >= 10) {
       newPlayer2.winner();
-      alert("Player 2, you win! Player 1, the pigs will now eat you! >:D")
+      alert("Player 2, you win! Player 1, the pigs will now eat you! >:D");
+      document.getElementById("roll2").disabled = true;
+      document.getElementById("roll1").disabled = true;
     }
   });
 });
