@@ -10,6 +10,14 @@
   text-align: center;
   font-family: 'Mountains of Christmas', cursive;
 }
+
+img {
+  display:block;
+  margin:auto;
+  width:200px;
+  height:200px;
+}
+
 .col-md-4 {
   margin-bottom: 20px;
   font-size: 20px;
@@ -18,12 +26,17 @@
 .col-md-4 h4 {
   font-family: 'Slackey', cursive;
   font-size: 25px;
+  color:black;
 }
 .jumbotron h1 {
   font-size: 112px;
   color: blanchedalmond;
   text-shadow: 5px 5px 5px black;
 }
+.jumbotron h4 {
+  color:black;
+}
+
 body {
   background-color: #F0AC95;
 }
@@ -34,7 +47,11 @@ body {
   font-size: 30px;
   margin-top: 20px;
 }
-
+ h3 , h4{
+  text-align: center;
+  font-family: 'Creepster',cursive;
+  color: darkred;
+}
 input {
   border: 3px solid black;
 }
@@ -46,12 +63,15 @@ input {
 .col-md-10 {
   /*display:none;*/
   border: dashed blanchedalmond 5px;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
+  background-color: #A0522D;
 }
 
 .col-md-10 h4 {
   font-family: 'Slackey', cursive;
   font-size: 20px;
+  color: blanchedalmond;
+  text-shadow: 5px 5px 5px black;
 }
 
 #rolling{
@@ -87,13 +107,22 @@ input {
   border: solid black 3px;
 }
 
+.col-md-4 #skip1 {
+  border: solid black 3px;
+}
+.col-md-4 #skip2 {
+  border: solid black 3px;
+}
+
 .col-md-4 #roll1 {
+  border: 3px solid black;
   margin-top: 10px;
   margin-left: 90px;
   margin-bottom: 10px;
 }
 
 .col-md-4 #roll2 {
+  border: 3px solid black;
   margin-top: 10px;
   margin-left: 90px;
   margin-bottom: 10px;
