@@ -33,10 +33,9 @@ _Behavior 8, First player to 10 wins_
 ## Setup/Installation Requirements
 
 * _Open terminal_
-* _Enter "git clone https://github.com/NWShadowDev/PigDice.git"_
-* _or go to "https://github.com/NWShadowDev/PigDice"_
-
-_All required files are included_
+* _Enter "git clone https://github.com/NWShadowDev/PigDice.git" to view the project code_
+* _OR View this site live [here](https://nwshadowdev.github.io/PigDice/)_
+* _All required files are included_
 
 ## Known Bugs
 
